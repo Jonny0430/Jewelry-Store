@@ -28,46 +28,47 @@ const holidays: HolidayItem[] = [
   {
     id: "1",
     icon: "🎂",
-    title: "Скоро\nДень рождения\nблизкого человека",
+    title: "Yaqinda\nYaqin insoningizning\nTug‘ilgan kuni",
     date: "",
     color: "#FFB74D"
   },
   {
     id: "2",
     icon: "🎄",
-    title: "1 января\nНовый Год",
+    title: "1 yanvar\nYangi yil",
     date: "",
     color: "#81C784"
   },
   {
     id: "3",
     icon: "💕",
-    title: "14 февраля\nДень Святого\nВалентина",
-    date: "14 февраля",
+    title: "14 fevral",
+    date: "14 fevral",
     color: "#F48FB1"
   },
   {
     id: "4",
     icon: "🎖️",
-    title: "23 февраля\nДень Защитника\nОтечества",
-    date: "23 февраля",
+    title: "23 fevral\nVatan himoyachilari kuni",
+    date: "23 fevral",
     color: "#FFB74D"
   },
   {
     id: "5",
     icon: "🌸",
-    title: "8 марта\nМеждународный\nЖенский День",
-    date: "8 марта",
+    title: "8 mart\nXalqaro\nAyollar kuni",
+    date: "8 mart",
     color: "#81C784"
   },
   {
     id: "6",
     icon: "🍲",
-    title: "9 марта\nДень Сурка",
-    date: "9 марта",
+    title: "9 mart\nSurkat kuni", // (Groundhog Day) — aslida "Groundhog Day"
+    date: "9 mart",
     color: "#F48FB1"
   },
 ];
+
 
 function HolidayCard({ item }: { item: HolidayItem }) {
   return (
@@ -97,14 +98,14 @@ function HolidayCard({ item }: { item: HolidayItem }) {
 
       {/* Date */}
       {item.date && (
-        <Text fontSize="xs" fontWeight="bold" color="gray.800">
+        <Text fontSize="x" fontWeight="bold" color="gray.800">
           {item.date}
         </Text>
       )}
 
       {/* Title */}
       <Text 
-        fontSize="xs" 
+        fontSize="x" 
         color="gray.600" 
         lineHeight="1.2"
         whiteSpace="pre-line"
@@ -117,7 +118,7 @@ function HolidayCard({ item }: { item: HolidayItem }) {
 
 export default function HolidaysTimeline({
   items = holidays,
-  title = "Ближайшие праздники",
+  title = "Yaqinlashib kelayotgan bayramlar",
 }: {
   items?: HolidayItem[];
   title?: string;
@@ -134,7 +135,7 @@ export default function HolidaysTimeline({
           color={titleColor}
         >
           {title}
-        </Heading>
+        </Heading> 
 
         {/* Desktop: Horizontal layout with connecting line */}
         <Box display={{ base: "none", md: "block" }} position="relative">
@@ -156,6 +157,7 @@ export default function HolidaysTimeline({
             align="flex-start"
             position="relative"
             zIndex={1}
+            fontSize={'x'}
           >
             {items.map((item) => (
               <HolidayCard key={item.id} item={item} />

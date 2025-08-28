@@ -3,6 +3,9 @@ import NavbarHome from './NavbarHome'
 import ServicesGrid from './CategoryTiles'
 import PromoCard from './PromoCard'
 import HolidaysTimeline from './HolidaysTimeline'
+import PopularSets from './PopularSetsSection'
+import NewsCard from './NewsSection'
+import CareSection from './CareSection'
 
 
 export function Home() {
@@ -12,6 +15,9 @@ export function Home() {
             <ServicesGrid />
             <PromoCard />
             <HolidaysTimeline />
+            <PopularSets />
+            <NewsCard />
+            <CareSection />
         </Stack>
     )
     } 

@@ -26,53 +26,54 @@ export type PromoItem = {
 const demoItems: PromoItem[] = [
   {
     id: "1",
-    tag: "БЕСПЛАТНАЯ ДОСТАВКА",
+    tag: "BEPUL YETKAZIB BERISH",
     tagColor: "cyan.500",
     image: "/logo/l1.png",
-    description: "По СПБ в районе КАД — от 3000₽\nПо МСК — от 5000₽",
+    description: "SPB (KAD hududida) — 3000₽ dan boshlab\nMSK — 5000₽ dan boshlab",
     captionBg: "blue.300",
   },
   {
     id: "2",
-    tag: "НОВИНКА",
+    tag: "YANGILIK",
     tagColor: "pink.500",
     image: "/logo/l2.png",
-    description: "Шоколадное пирожное картошка на основе бисквита!",
+    description: "Biskvit asosidagi shokoladli kartoshka pirojnasi!",
     captionBg: "pink.500",
   },
   {
     id: "3",
-    tag: "НОВИНКА",
+    tag: "YANGILIK",
     tagColor: "pink.500",
     image: "/logo/l3.png",
-    description: "Аппетитные конфеты на основе миндального печенья и крема",
+    description: "Bodom pechenyesi va krem asosidagi ishtahani ochuvchi konfetlar",
     captionBg: "pink.500",
   },
   {
     id: "4",
-    tag: "СЛАДКАЯ НОВИНКА",
+    tag: "SHIRIN YANGILIK",
     tagColor: "orange.400",
     image: "/logo/l4.png",
-    description: "Карамель на палочке из натуральных ингредиентов",
+    description: "Tabiiy ingredientlardan tayyorlangan karamelli shirinliklar",
     captionBg: "pink.500",
   },
-    {
+  {
     id: "5",
-    tag: "БЕСПЛАТНАЯ ДОСТАВКА",
+    tag: "BEPUL YETKAZIB BERISH",
     tagColor: "cyan.500",
     image: "/logo/l2.png",
-    description: "По СПБ в районе КАД — от 3000₽\nПо МСК — от 5000₽",
+    description: "SPB (KAD hududida) — 3000₽ dan boshlab\nMSK — 5000₽ dan boshlab",
     captionBg: "blue.300",
   },
-    {
+  {
     id: "6",
-    tag: "БЕСПЛАТНАЯ ДОСТАВКА",
+    tag: "BEPUL YETKAZIB BERISH",
     tagColor: "cyan.500",
     image: "/logo/l1.png",
-    description: "По СПБ в районе КАД — от 3000₽\nПо МСК — от 5000₽",
+    description: "SPB (KAD hududida) — 3000₽ dan boshlab\nMSK — 5000₽ dan boshlab",
     captionBg: "blue.300",
   },
 ];
+
 
 // Card component
 function PromoCard({ item }: { item: PromoItem }) {
@@ -130,7 +131,7 @@ function PromoCard({ item }: { item: PromoItem }) {
 // Simple carousel without Swiper (using horizontal scroll)
 export default function PromotionsCarousel({
   items = demoItems,
-  title = "Акции",
+  title = "Aksiyalar",
 }: {
   items?: PromoItem[];
   title?: string;
@@ -139,7 +140,7 @@ export default function PromotionsCarousel({
     <Box py={{ base: 6, md: 10 }}>
       <Container maxW="6xl">
         <HStack justify="center" mb={{ base: 4, md: 6 }}>
-          <Heading size={{ base: "md", md: "lg" }} color="gray.800">
+          <Heading size={{ base: "md", md: "lg" }} color="gray.800" fontFamily={'monospace'}>
             {title}
           </Heading>
         </HStack>
@@ -165,7 +166,7 @@ export default function PromotionsCarousel({
             },
           }}
         >
-          <HStack spacing={4} align="stretch" minW="max-content">
+          <HStack spacing={4} align="stretch" minW="max-content" fontFamily={'monospace'}>
             {items.map((item) => (
               <Box key={item.id} minW={{ base: "280px", md: "300px" }} maxW="300px">
                 <PromoCard item={item} />
@@ -174,8 +175,8 @@ export default function PromotionsCarousel({
           </HStack>
         </Box>
 
-        <Text mt={4} textAlign="center" fontSize="xs" color="gray.500">
-          Прокрутите горизонтально для просмотра всех акций
+        <Text mt={4} textAlign="center" fontSize="x" color="gray.500">
+          Barcha aksiyalarni ko‘rish uchun gorizontalga suring
         </Text>
       </Container>
     </Box>

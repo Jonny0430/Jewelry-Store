@@ -19,53 +19,54 @@ const ServiceIcon = ({ type }: { type: string }) => {
 const services = [
   {
     id: "ready",
-    title: "Готовые наборы",
-    subtitle: "Готовые наборы со скидкой",
-    description: "Вы можете подобрать набор на подходящий случай",
+    title: "Tayyor to‘plamlar",
+    subtitle: "Chegirma bilan tayyor to‘plamlar",
+    description: "Siz mos vaziyat uchun to‘plam tanlashingiz mumkin",
     bgColor: "#F5E6D3",
     icon: "ready",
   },
   {
     id: "custom",
-    title: "Собрать свой набор",
-    subtitle: "Выбрать количество макарун, и выбрать вкусы",
+    title: "O‘zingizning to‘plamingizni tuzing",
+    subtitle: "Makaron sonini va taʼmlarini tanlang",
     description: "",
     bgColor: "rgba(255, 194, 204, 1)",
     icon: "custom",
   },
   {
     id: "print",
-    title: "Набор с индивидуальной печатью",
-    subtitle: "Собрать набор макарон с уникальным дизайном",
+    title: "Shaxsiy bosma bilan to‘plam",
+    subtitle: "Noyob dizayn bilan makaron to‘plamini tuzing",
     description: "",
     bgColor: "#D1E7DD",
     icon: "print",
   },
   {
     id: "wedding",
-    title: "Свадебные предложения",
-    subtitle: "Нежные пирожные макаронс с разными вкусами для",
-    description: "украшения вашего свадебного торжества",
+    title: "To‘y takliflari",
+    subtitle: "Turli taʼmlardagi nozik makaronlar sizning",
+    description: "to‘y marosimingizni bezatish uchun",
     bgColor: "#F8D7DA",
     icon: "wedding",
   },
   {
     id: "corporate",
-    title: "Корпоративные подарки",
-    subtitle: "От 85 руб за шт. С уникальным дизайном.",
-    description: "Приятный комплимент для коллег и партнеров",
+    title: "Korporativ sovg‘alar",
+    subtitle: "1 donasi 85 rubl’dan. Noyob dizayn bilan.",
+    description: "Hamkasblar va hamkorlar uchun yoqimli tuhfa",
     bgColor: "#B3E5FC",
     icon: "corporate",
   },
   {
     id: "wholesale",
-    title: "Оптовые поставки",
-    subtitle: "Предложение для кофеен, кафе, отелей и т.д.",
-    description: "Посмотрите условия сотрудничества и отзывы.",
+    title: "Ulgurji yetkazib berish",
+    subtitle: "Qahvaxonalar, kafelar, mehmonxonalar va boshqalar uchun taklif",
+    description: "Hamkorlik shartlari va sharhlarni ko‘rib chiqing",
     bgColor: "#E1BEE7",
     icon: "wholesale",
   },
 ]
+
 
 const ServicesGrid = () => {
   const handleServiceClick = (serviceId: string) => {
@@ -75,7 +76,7 @@ const ServicesGrid = () => {
 
   return (
     <Container maxW="1200px" py={8}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} fontFamily={'monospace'} spacing={6}>
         {services.map((service) => (
           <Box
             key={service.id}

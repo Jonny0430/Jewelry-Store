@@ -1,3 +1,7 @@
+@import "swiper/css";
+@import "swiper/css/pagination";
+
+
 .App {
   text-align: center;
 }
