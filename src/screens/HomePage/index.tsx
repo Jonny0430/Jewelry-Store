@@ -1,6 +1,8 @@
 import { Stack } from '@chakra-ui/react'
 import NavbarHome from './NavbarHome'
 import ServicesGrid from './CategoryTiles'
+import PromoCard from './PromoCard'
+import HolidaysTimeline from './HolidaysTimeline'
 
 
 export function Home() {
@@ -8,6 +10,8 @@ export function Home() {
         <Stack>
             <NavbarHome imageSrc='/public/homeN/navbarh.png' />
             <ServicesGrid />
+            <PromoCard />
+            <HolidaysTimeline />
         </Stack>
     )
     } 
