@@ -13,6 +13,7 @@ import Katalog from './screens/ButunKatalog'
 
 
 
+
 function AppLayout() {
   return (
     <Flex minH="100vh">
@@ -22,6 +23,7 @@ function AppLayout() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/sets" element={<Order />} />
+              <Route path='/sets/:id' element={<Order />} />
               <Route path="/custom" element={<Products />} />
               <Route path="/design" element={<Dizayn />} />
                <Route path="/company" element={<Komponiya />} />
@@ -37,6 +39,7 @@ function AppLayout() {
 const App = () => {
 
   return (
+    
    <ChakraProvider theme={theme}>
     <AppLayout />
    </ChakraProvider>

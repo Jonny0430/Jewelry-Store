@@ -1,10 +1,12 @@
 import { Stack } from "@chakra-ui/react/stack"
-import ProductPage from "./Product"
+import CorporateGiftsSection from "./Product"
+import CorporateGiftsCarouselEmbla from "./GiftCard"
 
 const Products = () => {
     return (
         <Stack>
-            <ProductPage />
+            <CorporateGiftsSection />
+            <CorporateGiftsCarouselEmbla />
         </Stack>
     )
 }
